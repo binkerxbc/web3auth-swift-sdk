@@ -9,6 +9,7 @@ import SafariServices
 public class Web3Auth: NSObject {
     
     private let initParams: W3AInitParams
+    var authSession : ASWebAuthenticationSession
     
     /**
      Web3Auth  component for authenticating with web-based flow.
@@ -113,7 +114,7 @@ public class Web3Auth: NSObject {
                 }
                 callback(.success(callbackState))
             }
-            
+            this.authSession = authSession
             if #available(iOS 13.0, *) {
                 authSession.presentationContextProvider = self
             }
