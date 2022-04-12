@@ -9,7 +9,7 @@ import SafariServices
 public class Web3Auth: NSObject {
     
     private let initParams: W3AInitParams
-    var webSession
+    var webSession : NSObject
     
     /**
      Web3Auth  component for authenticating with web-based flow.
@@ -24,7 +24,7 @@ public class Web3Auth: NSObject {
      */
     public init(_ params: W3AInitParams) {
         self.initParams = params
-        self.webSession = nil
+        self.webSession = NSObject()
     }
     
     /**
