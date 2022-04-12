@@ -114,7 +114,7 @@ public class Web3Auth: NSObject {
                 }
                 callback(.success(callbackState))
             }
-            this.webSession = authSession
+            self.webSession = authSession
             if #available(iOS 13.0, *) {
                 authSession.presentationContextProvider = self
             }
