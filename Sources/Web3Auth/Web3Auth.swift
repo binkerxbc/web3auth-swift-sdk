@@ -24,6 +24,7 @@ public class Web3Auth: NSObject {
      */
     public init(_ params: W3AInitParams) {
         self.initParams = params
+        self.webSession = nil
     }
     
     /**
